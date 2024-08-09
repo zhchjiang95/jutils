@@ -1,8 +1,11 @@
 {
-  "name": "jutils",
+  "name": "@jiang/jutils",
   "version": "1.0.0",
-  "description": "",
+  "description": "JavaScript 便利工具集",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:types": "tsc",
     "build": "npm run build:types && rollup --config",
@@ -25,6 +28,7 @@
     "@babel/preset-env": "^7.25.3",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.20.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.5.0",
