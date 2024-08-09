@@ -4,4 +4,5 @@ import boxAnchor from "./boxAnchor";
 import pageAnchor from "./pageAnchor";
 import infiniteScroll from "./infiniteScroll";
 import adaptiveScaling from "./adaptiveScaling";
-export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, };
+import matchString from "./matchString";
+export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, };

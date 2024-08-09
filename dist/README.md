@@ -8,3 +8,26 @@
 | 盒子锚点（boxAnchor） | 盒子锚点，在任意可滑动盒子中跳转；监听事件元素需指定 data-jt-id 值为目标元素唯一标识 id。 |
 | 无限滚动（infiniteScroll） | 滚动至底部时，加载更多数据，或执行一些自定义的事件。可清除绑定事件。 |
 | 自适应缩放（adaptiveScaling） | 自适应等比缩放。适用大屏可视化自动适配屏幕。 |
+| 匹配字符串（matchString） | 字符串中匹配字符，匹配出的字符可用于高亮显示等。 |
+
+
+## 📦 Install
+
+```bash
+npm i @zhchjiang95/jutils
+```
+
+### 🔗 CDN
+
+```vue
+<script src="https://unpkg.com/@zhchjiang95/jutils"></script>
+```
+
+## 🦄 Usage
+
+```ts
+import { boxAnchor } from '@zhchjiang95/jutils';
+
+boxAnchor({source: 'div#source-box', target: '#target-box'}, (res) => {});
+
+```

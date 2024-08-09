@@ -1,6 +1,6 @@
 {
   "name": "@zhchjiang95/jutils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "JavaScript 便利工具集",
   "main": "index.js",
   "publishConfig": {
@@ -16,8 +16,11 @@
     "url": "git+https://github.com/zhchjiang95/jutils.git"
   },
   "type": "module",
-  "keywords": [],
+  "keywords": ["util", "modules"],
   "author": "zhchjiang95",
+  "contributors": [
+    "zhchjiang95 <i@fiume.cn>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhchjiang95/jutils/issues"

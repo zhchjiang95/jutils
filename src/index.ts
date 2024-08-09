@@ -4,6 +4,7 @@ import boxAnchor from "./boxAnchor";
 import pageAnchor from "./pageAnchor";
 import infiniteScroll from "./infiniteScroll";
 import adaptiveScaling from "./adaptiveScaling";
+import matchString from "./matchString";
 
 export {
   formatDate,
@@ -12,4 +13,5 @@ export {
   boxAnchor,
   infiniteScroll,
   adaptiveScaling,
+  matchString,
 };
