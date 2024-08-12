@@ -5,6 +5,7 @@ import pageAnchor from "./pageAnchor";
 import infiniteScroll from "./infiniteScroll";
 import adaptiveScaling from "./adaptiveScaling";
 import matchString from "./matchString";
+import filterTree from "./filterTree";
 
 export {
   formatDate,
@@ -14,4 +15,5 @@ export {
   infiniteScroll,
   adaptiveScaling,
   matchString,
+  filterTree,
 };
