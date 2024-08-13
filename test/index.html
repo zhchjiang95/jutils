@@ -44,7 +44,7 @@
       ]
     }];
 
-    const res = jutils.filterTree(treeData, 'name', 'Node 1')
+    const res = jutils.filterTree(treeData, 'name', 'Node 1', { callback: (o) => {console.log(o)} })
     console.log(res);
   </script>
 </body>

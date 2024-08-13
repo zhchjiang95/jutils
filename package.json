@@ -16,7 +16,7 @@
     "url": "git+https://github.com/zhchjiang95/jutils.git"
   },
   "type": "module",
-  "keywords": ["util", "modules"],
+  "keywords": ["util", "modules", "front-end"],
   "author": "zhchjiang95",
   "contributors": [
     "zhchjiang95 <i@fiume.cn>"

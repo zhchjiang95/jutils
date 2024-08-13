@@ -14,7 +14,9 @@
 
 ## 📄 文档
 
-> 详细文档请在使用中关注 JSDoc。
+> 详细使用请在使用中关注 JSDoc。
+
+🍭 [在线 Docs](https://zhchjiang95.github.io/)
 
 ## 📦 Install
 
@@ -31,8 +33,10 @@ npm i @zhchjiang95/jutils
 ## 🦄 Usage
 
 ```ts
+// module
 import { boxAnchor } from '@zhchjiang95/jutils';
-
 boxAnchor({source: 'div#source-box', target: '#target-box'}, (res) => {});
 
+// CDN
+jutils.boxAnchor({source: 'div#source-box', target: '#target-box'}, (res) => {});
 ```
