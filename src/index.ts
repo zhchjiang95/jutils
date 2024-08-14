@@ -6,6 +6,7 @@ import infiniteScroll from "./infiniteScroll";
 import adaptiveScaling from "./adaptiveScaling";
 import matchString from "./matchString";
 import filterTree from "./filterTree";
+import formatUrlSearch from "./formatUrlSearch";
 
 export {
   formatDate,
@@ -16,4 +17,5 @@ export {
   adaptiveScaling,
   matchString,
   filterTree,
+  formatUrlSearch,
 };
