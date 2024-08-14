@@ -10,42 +10,9 @@
 
 <body>
   <script>
-    const treeData = [{
-      id: 1,
-      name: 'Root Node',
-      children: [
-        {
-          id: 2,
-          name: 'Child Node 1',
-          children: [
-            {
-              id: 4,
-              name: 'Grandchild Node 1',
-              children: []
-            },
-            {
-              id: 5,
-              name: 'Grandchild Node 2',
-              children: []
-            }
-          ]
-        },
-        {
-          id: 3,
-          name: 'Child Node 2',
-          children: [
-            {
-              id: 6,
-              name: 'Grandchild Node 3',
-              children: []
-            }
-          ]
-        }
-      ]
-    }];
-
-    const res = jutils.filterTree(treeData, 'name', 'Node 1', { callback: (o) => {console.log(o)} })
-    console.log(res);
+    document.addEventListener('mousemove', jutils.debounceFn(() => {
+      console.log(333);
+    }, 500, { maxWait: 2000 }))
   </script>
 </body>
 

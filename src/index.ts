@@ -7,6 +7,8 @@ import adaptiveScaling from "./adaptiveScaling";
 import matchString from "./matchString";
 import filterTree from "./filterTree";
 import formatUrlSearch from "./formatUrlSearch";
+import throttleFn from "./throttleFn";
+import debounceFn from "./debounceFn";
 
 export {
   formatDate,
@@ -18,4 +20,6 @@ export {
   matchString,
   filterTree,
   formatUrlSearch,
+  throttleFn,
+  debounceFn,
 };

@@ -7,4 +7,6 @@ import adaptiveScaling from "./adaptiveScaling";
 import matchString from "./matchString";
 import filterTree from "./filterTree";
 import formatUrlSearch from "./formatUrlSearch";
-export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, };
+import throttleFn from "./throttleFn";
+import debounceFn from "./debounceFn";
+export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, };
