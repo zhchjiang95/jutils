@@ -11,5 +11,5 @@
     }, 1000, true))
  * ```
  */
-declare const throttleFn: (fn: () => void, ms?: number, trailing?: boolean) => (() => void);
+declare const throttleFn: <T extends Function>(fn: T, ms?: number, trailing?: boolean) => ((e: Event) => void);
 export default throttleFn;

@@ -9,6 +9,7 @@ import filterTree from "./filterTree";
 import formatUrlSearch from "./formatUrlSearch";
 import throttleFn from "./throttleFn";
 import debounceFn from "./debounceFn";
+import canvasPathEvent from "./canvasPathEvent";
 
 export {
   formatDate,
@@ -22,4 +23,5 @@ export {
   formatUrlSearch,
   throttleFn,
   debounceFn,
+  canvasPathEvent,
 };

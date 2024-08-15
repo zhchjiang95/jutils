@@ -11,7 +11,7 @@
     }, 500, { maxWait: 2000 }))
  * ```
  */
-declare const debounceFn: (fn: () => void, ms?: number, opt?: {
+declare const debounceFn: <T extends Function>(fn: T, ms?: number, opt?: {
     maxWait?: number;
-}) => () => void;
+}) => ((e: Event) => void);
 export default debounceFn;

@@ -44,3 +44,4 @@ jutils.boxAnchor({source: 'div#source-box', target: '#target-box'}, (res) => {})
 | 过滤树数据（filterTree） | 搜索过滤树。按树层级返回过滤后树数据。 |
 | 节流函数（throttleFn） | 在连续的函数触发过程中限制执行次数。 |
 | 防抖函数（debounceFn） | 在连续的函数触发过程执行最后一次，支持最大等待时间。 |
+| canvasPath2D事件（canvasPathEvent） | 给Canvas Path2D路径绑定事件。 |

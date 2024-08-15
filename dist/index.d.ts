@@ -9,4 +9,5 @@ import filterTree from "./filterTree";
 import formatUrlSearch from "./formatUrlSearch";
 import throttleFn from "./throttleFn";
 import debounceFn from "./debounceFn";
-export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, };
+import canvasPathEvent from "./canvasPathEvent";
+export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, canvasPathEvent, };

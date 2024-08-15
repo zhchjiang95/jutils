@@ -11,13 +11,13 @@
     }, 1000, true))
  * ```
  */
-const throttleFn = (
-  fn: () => void,
+const throttleFn = <T extends Function>(
+  fn: T,
   ms: number = 200,
   trailing: boolean = false
-): (() => void) => {
+): ((e: Event) => void) => {
   let flag = true;
-  return () => {
+  return (e) => {
     if (flag) {
       flag = false;
       setTimeout(() => {
@@ -25,12 +25,12 @@ const throttleFn = (
         if (trailing) {
           setTimeout(() => {
             if (flag) {
-              fn();
+              fn(e);
             }
           }, 10);
         }
       }, ms);
-      fn();
+      fn(e);
     }
   };
 };
