@@ -16,7 +16,7 @@ interface RecordData {
  * @param paths Path2D 数组
  * @param eventType 事件类型（"mousemove" | "mouseleave" | "mouseover" | "click"），若为数组 index,path的赋值只发生在数组的第一位事件中，其它事件仅改变样式
  * @param cb 回调函数，参数为 { index: 当前paths中的下标；path: 当前path；e: {clientX；clientY}}
- * @param opts { ms：节流时延，默认80毫秒；devicePixelRatio：如果自定义了画布大小与样式大小比，则传入 }
+ * @param opts { ms：节流时延，默认80毫秒；dpr：如果自定义了画布大小与样式大小比，则传入 }
  * @returns stop 清除监听的函数
  * @example
  * ```js
@@ -33,7 +33,7 @@ const canvasPathEvent = (
   cb: (e: RecordData) => void,
   opt?: {
     ms?: number;
-    devicePixelRatio?: number
+    dpr?: number
   }
 ) => {
   const current: RecordData = {
@@ -56,7 +56,7 @@ const canvasPathEvent = (
 
     const onPathEvent = throttleFn((ev: MouseEvent) => {
       const { offsetX, offsetY, clientX, clientY, type } = ev;
-      const dpr = opt?.devicePixelRatio || canvas.width / canvas.clientWidth;
+      const dpr = opt?.dpr || canvas.width / canvas.clientWidth;
       const i = paths.findIndex((p) => {
         return ctx.isPointInPath(p, offsetX * dpr, offsetY * dpr);
       });
