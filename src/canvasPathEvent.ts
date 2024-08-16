@@ -26,7 +26,6 @@ interface RecordData {
  * const stop = canvasPathEvent(canvas, [path1, path2], ['mouseover', 'mousemove'], (res) => {});
  * ```
  */
-
 const canvasPathEvent = (
   canvas: HTMLCanvasElement,
   paths: Path2D[],

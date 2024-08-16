@@ -10,6 +10,7 @@ import formatUrlSearch from "./formatUrlSearch";
 import throttleFn from "./throttleFn";
 import debounceFn from "./debounceFn";
 import canvasPathEvent from "./canvasPathEvent";
+import createCanvas from "./createCanvas";
 
 export {
   formatDate,
@@ -24,4 +25,5 @@ export {
   throttleFn,
   debounceFn,
   canvasPathEvent,
+  createCanvas,
 };
