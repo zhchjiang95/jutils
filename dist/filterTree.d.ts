@@ -16,5 +16,5 @@ type FilterTreeParams<T> = {
  * const result = filterTree(data, 'a', '3');
  * ```
  */
-export declare const filterTree: <T>(data: T[], searchField: string, searchValue: string, rest: FilterTreeParams<T>) => T[];
+export declare const filterTree: <T>(data: T[], searchField: string, searchValue: string, rest?: FilterTreeParams<T>) => T[];
 export default filterTree;

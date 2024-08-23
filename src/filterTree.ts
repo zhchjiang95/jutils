@@ -21,7 +21,7 @@ export const filterTree = <T>(
   data: T[],
   searchField: string,
   searchValue: string,
-  rest: FilterTreeParams<T>
+  rest?: FilterTreeParams<T>
 ): T[] => {
   const { childrenField, callback } = rest || {};
   const children = childrenField || "children";
