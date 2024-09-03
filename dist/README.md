@@ -46,3 +46,4 @@ jutils.boxAnchor({source: 'div#source-box', target: '#target-box'}, (res) => {})
 | 防抖函数（debounceFn） | 在连续的函数触发过程执行最后一次，支持最大等待时间。 |
 | canvasPath2D事件（canvasPathEvent） | 给Canvas Path2D路径绑定事件。 |
 | 创建 Canvas 元素（createCanvas） | 快速创建 Canvas 元素。 |
+| 转换为驼峰（transHump） | 字符串转换为大/小驼峰。 |

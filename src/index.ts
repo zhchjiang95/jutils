@@ -11,6 +11,7 @@ import throttleFn from "./throttleFn";
 import debounceFn from "./debounceFn";
 import canvasPathEvent from "./canvasPathEvent";
 import createCanvas from "./createCanvas";
+import transHump from "./transHump";
 
 export {
   formatDate,
@@ -26,4 +27,5 @@ export {
   debounceFn,
   canvasPathEvent,
   createCanvas,
+  transHump,
 };

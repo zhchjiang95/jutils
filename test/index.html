@@ -11,12 +11,8 @@
 <body>
 
   <script>
-    const canvas = jutils.createCanvas(null, { width: 400, height: 300 });
-    const ctx = canvas.getContext("2d");
-    ctx.arc(200, 150, 100, 0, Math.PI * 2);
-    ctx.fillStyle = "orange"
-    ctx.fill();
-    document.body.appendChild(canvas);
+    const s = "hello world";
+    console.log(jutils.transHump(s, " "));
   </script>
 </body>
 

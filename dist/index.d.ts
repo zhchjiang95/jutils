@@ -11,4 +11,5 @@ import throttleFn from "./throttleFn";
 import debounceFn from "./debounceFn";
 import canvasPathEvent from "./canvasPathEvent";
 import createCanvas from "./createCanvas";
-export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, canvasPathEvent, createCanvas, };
+import transHump from "./transHump";
+export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, canvasPathEvent, createCanvas, transHump, };
