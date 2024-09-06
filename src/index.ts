@@ -12,6 +12,7 @@ import debounceFn from "./debounceFn";
 import canvasPathEvent from "./canvasPathEvent";
 import createCanvas from "./createCanvas";
 import transHump from "./transHump";
+import freelySplit from "./freelySplit";
 
 export {
   formatDate,
@@ -28,4 +29,5 @@ export {
   canvasPathEvent,
   createCanvas,
   transHump,
+  freelySplit,
 };
