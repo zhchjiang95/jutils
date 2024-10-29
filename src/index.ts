@@ -13,6 +13,7 @@ import canvasPathEvent from "./canvasPathEvent";
 import createCanvas from "./createCanvas";
 import transHump from "./transHump";
 import freelySplit from "./freelySplit";
+import marquee from "./marquee";
 
 export {
   formatDate,
@@ -30,4 +31,5 @@ export {
   createCanvas,
   transHump,
   freelySplit,
+  marquee,
 };

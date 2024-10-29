@@ -9,10 +9,9 @@
 </head>
 
 <body>
-
+  <div id="test" style="width: 200px">包含文字的标签元素，文字超出宽度会滚动显示</div>
   <script>
-    console.log(jutils.freelySplit('E88°5′2.40″', ["E", "W", "N", "S", "°", "′", "″"]));
-    console.log(jutils.freelySplit('jutils - JavaScript 便利工具集', ["-", " "], { retain: false }));
+    jutils.marquee(test);
   </script>
 </body>
 

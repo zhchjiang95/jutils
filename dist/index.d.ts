@@ -13,4 +13,5 @@ import canvasPathEvent from "./canvasPathEvent";
 import createCanvas from "./createCanvas";
 import transHump from "./transHump";
 import freelySplit from "./freelySplit";
-export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, canvasPathEvent, createCanvas, transHump, freelySplit, };
+import marquee from "./marquee";
+export { formatDate, slideDirection, pageAnchor, boxAnchor, infiniteScroll, adaptiveScaling, matchString, filterTree, formatUrlSearch, throttleFn, debounceFn, canvasPathEvent, createCanvas, transHump, freelySplit, marquee, };

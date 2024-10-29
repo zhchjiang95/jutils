@@ -48,3 +48,4 @@ jutils.boxAnchor({source: 'div#source-box', target: '#target-box'}, (res) => {})
 | 创建 Canvas 元素（createCanvas） | 快速创建 Canvas 元素。 |
 | 转换为驼峰（transHump） | 字符串转换为大/小驼峰。 |
 | 分割字符串（freelySplit） | 自由分割字符串。 |
+| 文字滚动显示（marquee） | 文字滚动显示。 |
