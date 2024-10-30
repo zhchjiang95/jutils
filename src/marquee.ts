@@ -22,10 +22,14 @@ const marquee = (el: HTMLElement, speed: number = 2, pause: number = 15) => {
     [1, 10],
   ];
   el.classList.add("jutilsmarquee");
-  const style = document.createElement("style");
-  style.innerText =
-    ".jutilsmarquee{white-space: nowrap;overflow: auto;}.jutilsmarquee::-webkit-scrollbar{display: none;}";
-  document.head.append(style);
+  const styleel = document.querySelector("#jutilsmarquee");
+  if(styleel === null){
+    const style = document.createElement("style");
+    style.id = "jutilsmarquee";
+    style.innerText =
+      ".jutilsmarquee{white-space: nowrap;overflow: auto;}.jutilsmarquee::-webkit-scrollbar{display: none;}";
+    document.head.append(style);
+  }
   const w = el.scrollWidth - parseFloat(getComputedStyle(el).width);
   timer = setInterval(() => {
     if (recordX >= w) {
@@ -43,7 +47,6 @@ const marquee = (el: HTMLElement, speed: number = 2, pause: number = 15) => {
 
   return () => {
     clearInterval(timer);
-    style.remove();
   };
 };
 
