@@ -12,6 +12,47 @@
   <div id="test" style="width: 200px">包含文字的标签元素，文字超出宽度会滚动显示</div>
   <script>
     jutils.marquee(test);
+    const treeData = [{
+      id: 1,
+      name: 'Root Node',
+      children: [
+        {
+          id: 2,
+          name: 'Child Node 1',
+          children: [
+            {
+              id: 4,
+              name: 'Grandchild Node 1',
+              children: []
+            },
+            {
+              id: 5,
+              name: 'Grandchild Node 2',
+              children: []
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: 'Child Node 2',
+          children: [
+            {
+              id: 6,
+              name: 'Grandchild Node 31',
+              children: []
+            }
+          ]
+        }
+      ]
+    }];
+
+    const res = jutils.filterTree(treeData, 'name', 'Grandchild Node 31', {
+      strict: true,
+      callback(r){
+        console.log(r);
+      }
+    })
+    console.log(res);
   </script>
 </body>
 

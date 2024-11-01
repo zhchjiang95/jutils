@@ -1,5 +1,6 @@
 type FilterTreeParams<T> = {
     childrenField?: string;
+    strict?: boolean;
     callback?: (arg: T) => void;
 };
 /**
@@ -7,7 +8,7 @@ type FilterTreeParams<T> = {
  * @param data 树数据，须 children 字段，可使用 childrenField 替换
  * @param searchField 需要搜索的字段
  * @param searchValue 搜索的字符串
- * @param rest 配置对象 { childrenField: 子级数组不是children，可替换 children 字段，callback：回调函数，过滤的数据用来再做些什么？ }
+ * @param rest 配置对象 { childrenField: 子级数组不是children，可替换 children 字段；strict：严格模式，搜索比较使用绝对等于；callback：回调函数，过滤的数据用来再做些什么？ }
  * @returns 过滤后树数据
  * @example
  * ```js
