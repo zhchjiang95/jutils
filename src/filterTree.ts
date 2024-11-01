@@ -28,9 +28,10 @@ export const filterTree = <T>(
   const children = childrenField || "children";
   const searchTree = (d: any[]) => {
     d.forEach((v) => {
+      const value = v[searchField]?.toString();
       const f = strict
-        ? v[searchField]?.toUpperCase() === searchValue?.toUpperCase()
-        : v[searchField]?.toUpperCase().includes(searchValue?.toUpperCase());
+        ? value?.toUpperCase() === searchValue?.toUpperCase()
+        : value?.toUpperCase().includes(searchValue?.toUpperCase());
       v.search = f;
       if (v[children]) {
         searchTree(v[children]);
