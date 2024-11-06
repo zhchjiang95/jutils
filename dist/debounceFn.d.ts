@@ -13,5 +13,5 @@
  */
 declare const debounceFn: <T extends Function>(fn: T, ms?: number, opt?: {
     maxWait?: number;
-}) => ((e: Event) => void);
+}) => ((...args: any[]) => void);
 export default debounceFn;

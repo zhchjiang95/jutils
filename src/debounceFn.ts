@@ -15,22 +15,22 @@ const debounceFn = <T extends Function>(
   fn: T,
   ms: number = 200,
   opt?: { maxWait?: number }
-): ((e: Event) => void) => {
+): ((...args: any[]) => void) => {
   let timer: NodeJS.Timeout;
   let t: number | undefined;
-  return (e) => {
+  return (...args) => {
     if (t === undefined) {
       t = new Date().getTime();
     }
     if (opt?.maxWait) {
       if (t && new Date().getTime() - t > opt.maxWait) {
-        fn(e);
+        fn(...args);
         t = undefined;
       }
     }
     clearTimeout(timer);
     timer = setTimeout(() => {
-      fn(e);
+      fn(...args);
       t = undefined;
     }, ms);
   };
