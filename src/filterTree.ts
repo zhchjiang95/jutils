@@ -46,13 +46,13 @@ export const filterTree = <T>(
   const filterTree = (data: any[]) => {
     return data.filter((v) => {
       if (v[children]) {
-        if(onlySearch){
+        if (onlySearch) {
           filterTree(v[children]);
         } else {
           v[children] = filterTree(v[children]);
         }
       }
-      const pass = v.search || v[children]?.length > 0;
+      const pass = onlySearch ? v.search : v.search || v[children]?.length > 0;
       delete v.search;
       if (pass) callback?.(v);
       return pass;
