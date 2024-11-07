@@ -1,6 +1,11 @@
 type FilterTreeParams<T> = {
+  /** 替换 children 字段 */
   childrenField?: string;
+  /** 严格模式，搜索比较使用绝对等于 */
   strict?: boolean;
+  /** 仅搜索，不过滤，匹配到的项使用callback做点什么 */
+  onlySearch?: boolean;
+  /** 使用匹配到的项做点什么 */
   callback?: (arg: T) => void;
 };
 
@@ -9,7 +14,7 @@ type FilterTreeParams<T> = {
  * @param data 树数据，须 children 字段，可使用 childrenField 替换
  * @param searchField 需要搜索的字段
  * @param searchValue 搜索的字符串
- * @param rest 配置对象 { childrenField: 子级数组不是children，可替换 children 字段；strict：严格模式，搜索比较使用绝对等于；callback：回调函数，过滤的数据用来再做些什么？ }
+ * @param rest 配置对象 { childrenField: 子级数组不是children，可替换 children 字段；strict：严格模式，搜索比较使用绝对等于；onlySearch：仅搜索，不过滤，匹配到的项使用callback做点什么；callback：回调函数，过滤的数据用来再做些什么？ }
  * @returns 过滤后树数据
  * @example
  * ```js
@@ -24,7 +29,7 @@ export const filterTree = <T>(
   searchValue: string,
   rest?: FilterTreeParams<T>
 ): T[] => {
-  const { childrenField, strict, callback } = rest || {};
+  const { childrenField, strict, onlySearch, callback } = rest || {};
   const children = childrenField || "children";
   const searchTree = (d: any[]) => {
     d.forEach((v) => {
@@ -41,7 +46,11 @@ export const filterTree = <T>(
   const filterTree = (data: any[]) => {
     return data.filter((v) => {
       if (v[children]) {
-        v[children] = filterTree(v[children]);
+        if(onlySearch){
+          filterTree(v[children]);
+        } else {
+          v[children] = filterTree(v[children]);
+        }
       }
       const pass = v.search || v[children]?.length > 0;
       delete v.search;
