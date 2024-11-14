@@ -6,7 +6,7 @@
 
 🍭 [在线 Docs](https://zhchjiang95.github.io/)
 
-## 📦 Install
+## 📦 Install --> 建议锁定版本😈
 
 ```bash
 npm i @zhchjiang95/jutils
